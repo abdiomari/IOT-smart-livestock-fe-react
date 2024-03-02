@@ -19,7 +19,7 @@ import {
 
 // assets
 import { IconBrandTelegram, IconBuildingStore, IconMailbox, IconPhoto } from '@tabler/icons-react';
-import User1 from 'assets/images/users/user-round.svg';
+// import User1 from 'assets/images/users/user-round.svg';
 
 // styles
 const ListItemWrapper = styled('div')(({ theme }) => ({
@@ -86,7 +86,7 @@ const NotificationList = () => {
       <ListItemWrapper>
         <ListItem alignItems="center">
           <ListItemAvatar>
-            <Avatar alt="John Doe" src={User1} />
+            {/* <Avatar alt="John Doe" src={User1} /> */}
           </ListItemAvatar>
           <ListItemText primary="John Doe" />
           <ListItemSecondaryAction>
@@ -199,7 +199,7 @@ const NotificationList = () => {
       <ListItemWrapper>
         <ListItem alignItems="center">
           <ListItemAvatar>
-            <Avatar alt="John Doe" src={User1} />
+            {/* <Avatar alt="John Doe" src={User1} /> */}
           </ListItemAvatar>
           <ListItemText primary={<Typography variant="subtitle1">John Doe</Typography>} />
           <ListItemSecondaryAction>
@@ -249,7 +249,7 @@ const NotificationList = () => {
       <ListItemWrapper>
         <ListItem alignItems="center">
           <ListItemAvatar>
-            <Avatar alt="John Doe" src={User1} />
+            {/* <Avatar alt="John Doe" src={User1} /> */}
           </ListItemAvatar>
           <ListItemText primary={<Typography variant="subtitle1">John Doe</Typography>} />
           <ListItemSecondaryAction>

@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import MainCard from 'ui-component/cards/MainCard';
+import MainCard from '../../ui-component/cards/MainCard';
 
 const Animals = () => {
     <MainCard title='Sample Card'>
@@ -8,3 +8,5 @@ const Animals = () => {
         </Typography>
     </MainCard>
 }
+
+export default Animals;
