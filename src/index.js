@@ -6,13 +6,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import config from './config';
+import './assets/scss/style.scss';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router>
+      <Router basename={config.basename}>
         <App />
       </Router>
     </Provider>

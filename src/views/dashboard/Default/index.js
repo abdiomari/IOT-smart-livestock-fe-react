@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { Grid, Typography } from '@mui/material';
 
 // project imports
-import EarningCard from '../../../ui-component/cards/Skeleton/EarningCard';
-import PopularCard from '../../../ui-component/cards/Skeleton/PopularCard';
+
+import AnimalCount from './AnimalCount';
 // import PopularCard from './PopularCard';
 // import TotalOrderLineChartCard from './TotalOrderLineChartCard';
 // import TotalIncomeDarkCard from './TotalIncomeDarkCard';
@@ -26,7 +26,7 @@ const Dashboard = () => {
       <Grid item xs={12}>
         <Grid container spacing={gridSpacing}>
           <Grid item lg={4} md={6} sm={6} xs={12}>
-            <EarningCard isLoading={isLoading} />
+            <AnimalCount isLoading={isLoading} />
           </Grid>
           <Grid item lg={4} md={6} sm={6} xs={12}>
             <Typography>
@@ -58,7 +58,7 @@ const Dashboard = () => {
             {/* <TotalGrowthBarChart isLoading={isLoading} /> */}
           </Grid>
           <Grid item xs={12} md={4}>
-            <PopularCard isLoading={isLoading} />
+            {/* <PopularCard isLoading={isLoading} /> */}
           </Grid>
         </Grid>
       </Grid>

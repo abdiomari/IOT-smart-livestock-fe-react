@@ -17,9 +17,9 @@ import { drawerWidth } from '../../../store/constant';
 // ==============================|| SIDEBAR DRAWER ||============================== //
 
 const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
+  
   const theme = useTheme();
   const matchUpMd = useMediaQuery(theme.breakpoints.up('md'));
-
   const drawer = (
     <>
       <Box sx={{ display: { xs: 'block', md: 'none' } }}>
