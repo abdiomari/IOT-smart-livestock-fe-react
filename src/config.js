@@ -1,6 +1,6 @@
 const config = {
-    basename: '/farm-dashboard',
-    defaultPath: '/dashboard/default',
+    basename: '/',
+    defaultPath: '/dashboard',
     fontFamily: `'Roboto', sans-serif`,
     borderRadius: 12,
 }

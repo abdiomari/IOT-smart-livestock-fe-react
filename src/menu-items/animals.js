@@ -13,9 +13,17 @@ const animals = {
   children: [
     {
       id: 'animals',
-      title: 'animals',
+      title: 'Animals',
       type: 'item',
       url: '/animals',
+      icon: icons.IconDashboard,
+      breadcrumbs: false
+    },
+    {
+      id: 'newAnimals',
+      title: 'Add Animals',
+      type: 'item',
+      url: '/animals/new',
       icon: icons.IconDashboard,
       breadcrumbs: false
     }

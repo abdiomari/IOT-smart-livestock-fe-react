@@ -1,92 +1,49 @@
-import { lazy } from 'react';
+// import { lazy } from 'react';
 
 // project imports
 import MainLayout from '../layout/MainLayout';
-import Loadable from '../ui-component/Loadable';
+// import Loadable from '../ui-component/Loadable';
 
 // dashboard routing
-const DashboardDefault = Loadable(lazy(() => import('../views/dashboard/Default')));
+import Dashboard from '../views/dashboard';
+import Sensors from '../views/sensors';
+import Animals from '../views/animals';
+import Geofence from '../views/geofence';
+import NewAnimals from '../views/animals';
+// const DashboardDefault = Loadable(lazy(() => import('../views/dashboard')));
+// const Animals = Loadable(lazy(() => import('../views/animals')));
+// const Geofence = Loadable(lazy(() => import('../views/geofence')));
+// const Sensors = Loadable(lazy(() => import('../views/sensors')));
 
-// utilities routing
-// const UtilsTypography = Loadable(lazy(() => import('views/utilities/Typography')));
-// const UtilsColor = Loadable(lazy(() => import('views/utilities/Color')));
-// const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
-// const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
-// const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
-
-// sample page routing
-// const SamplePage = Loadable(lazy(() => import('views/sample-page')));
-const Animals = Loadable(lazy(() => import('../views/animals')));
-
-// ==============================|| MAIN ROUTING ||============================== //
-
-const MainRoutes = {
+const MainRoutes ={
+ 
   path: '/',
   element: <MainLayout />,
   children: [
     {
-      path: '/',
-      element: <DashboardDefault />
+      path: 'dashboard',
+      element: <Dashboard />
     },
     {
-      path: 'dashboard',
+      path:'animals',
+      element: <Animals />,
       children: [
         {
-          path: 'default',
-          element: <DashboardDefault />
-        }
+          path: 'new',
+          element: <NewAnimals />
+        },
       ]
     },
-    // {
-    //   path: 'utils',
-    //   children: [
-    //     {
-    //       path: 'util-typography',
-    //       element: <UtilsTypography />
-    //     }
-    //   ]
-    // },
-    // {
-    //   path: 'utils',
-    //   children: [
-    //     {
-    //       path: 'util-color',
-    //       element: <UtilsColor />
-    //     }
-    //   ]
-    // },
-    // {
-    //   path: 'utils',
-    //   children: [
-    //     {
-    //       path: 'util-shadow',
-    //       element: <UtilsShadow />
-    //     }
-    //   ]
-    // },
-    // {
-    //   path: 'icons',
-    //   children: [
-    //     {
-    //       path: 'tabler-icons',
-    //       element: <UtilsTablerIcons />
-    //     }
-    //   ]
-    // },
-    // {
-    //   path: 'icons',
-    //   children: [
-    //     {
-    //       path: 'material-icons',
-    //       element: <UtilsMaterialIcons />
-    //     }
-    //   ]
-    // },
     {
-      path: 'animals',
-      element: <Animals />
-    }
+      path:'sensors',
+      element: <Sensors />
+    },
+    {
+      path:'geofence',
+      element: <Geofence />
+    },
   ]
+ 
 };
 
 export default MainRoutes;
